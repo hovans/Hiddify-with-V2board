@@ -101,7 +101,7 @@ Perform the following replacements in the project directory:
         android:name=".Application"
         android:banner="@mipmap/ic_banner"
         android:icon="@mipmap/ic_launcher"
-        android:label="悠兔"
+        android:label="贝贝云"
     ```
 
 ### 5. Build the application
