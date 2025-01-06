@@ -15,6 +15,7 @@ import 'package:hiddify/features/proxy/active/active_proxy_footer.dart';
 import 'package:hiddify/utils/placeholders.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:sliver_tools/sliver_tools.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends HookConsumerWidget {
   const HomePage({super.key});
@@ -100,7 +101,7 @@ class HomePage extends HookConsumerWidget {
                                   // 导航到套餐购买页面
                                     launchUrl(Uri.parse('https://boostqz.com'));
                                 },
-                                child: Text("到官网购买套餐"),
+                                child: Text("请到官网购买套餐，购买后重新登录"),
                               ),
                             ],
                           ),
