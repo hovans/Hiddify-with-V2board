@@ -342,13 +342,7 @@
       "region": "Region",
       "regionMsg": "Helps set default options to bypass domestic addresses",
       "regions": {
-        "ir": "Iran (ir) 🇮🇷",
         "cn": "China (cn) 🇨🇳",
-        "ru": "Russia (ru) 🇷🇺",
-        "af": "Afghanistan (af) 🇦🇫",
-        "id": "Indonesia (id) 🇮🇩",
-        "tr": "Türkiye (tr) 🇹🇷",
-        "br": "Brazil (br) 🇧🇷",
         "other": "Other"
       },
       "themeMode": "Theme Mode",

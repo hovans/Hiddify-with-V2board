@@ -174,12 +174,7 @@
       "region": "Région",
       "regionMsg": "Aide à définir les options par défaut pour contourner les adresses nationales",
       "regions": {
-        "ir": "Iran (ir) 🇮🇷",
         "cn": "Chine (cn) 🇨🇳",
-        "ru": "Russie (ru) 🇷🇺",
-        "af": "Afghanistan (af) 🇦🇫",
-        "id": "Indonésie (id) 🇮🇩",
-        "tr": "Turquie (tr) 🇹🇷",
         "other": "Autre"
       },
       "themeMode": "Mode Thème",

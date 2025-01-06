@@ -174,12 +174,7 @@
       "region": "Região",
       "regionMsg": "Ajuda a definir opções padrão para ignorar endereços domésticos",
       "regions": {
-        "ir": "Irã (ir)",
         "cn": "China (cn)",
-        "ru": "Rússia (ru)",
-        "af": "Afeganistão (af)",
-        "id": "Indonesia (id)",
-        "tr": "Turquia (tr) 🇹🇷",
         "other": "Outro"
       },
       "themeMode": "Modo de Tema",
