@@ -38,10 +38,6 @@ class AdaptiveRootScaffold extends HookConsumerWidget {
         label: t.proxies.pageTitle,
       ),
       NavigationDestination(
-        icon: const Icon(FluentIcons.money_24_filled),
-        label: t.purchase.pageTitle,
-      ),
-      NavigationDestination(
         icon: const Icon(FluentIcons.person_20_filled), 
         label: t.userInfo.pageTitle, 
       ),
