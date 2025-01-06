@@ -83,10 +83,6 @@ GlobalKey<NavigatorState>? dynamicRootKey =
       path: "/proxies",
       name: ProxiesRoute.name,
     ),
-    TypedGoRoute<PurchaseRoute>(
-      path: "/purchase",
-      name: PurchaseRoute.name,
-    ),
     TypedGoRoute<OrderRoute>(
       path: "/order",
       name: OrderRoute.name,
@@ -133,10 +129,6 @@ class MobileWrapperRoute extends ShellRouteData {
           name: QuickSettingsRoute.name,
         ),
       ],
-    ),
-    TypedGoRoute<PurchaseRoute>(
-      path: "/purchase",
-      name: PurchaseRoute.name,
     ),
     TypedGoRoute<OrderRoute>(
       path: "/order",

@@ -31,7 +31,9 @@
   "home": {
     "pageTitle": "首頁",
     "emptyProfilesMsg": "首先新增訂閱設定檔",
-    "noActiveProfileMsg": "選擇設定檔"
+    "noActiveProfileMsg": "選擇設定檔",
+    "noSubscriptionMsg": "当前账户没有可用订阅，请前往套餐购买页面，购买相应的套餐后使用。若已经购买请尝试退出登录后重新登录",
+    "goToPurchasePage": "前往购买套餐"
   },
   "stats": {
     "traffic": "流量",
@@ -274,7 +276,7 @@
     },
     "singbox": {
       "unexpected": "意外服務錯誤",
-      "serviceNotRunning": "服務未執行",
+      "serviceNotRunning": "服務未執行，请点击主页的【点击连接】按钮开启",
       "missingPrivilege": "缺少權限",
       "missingPrivilegeMsg": "VPN 模式需要管理員權限。以管理員身分重新啟動應用程式或變更服務模式。",
       "missingGeoAssets": "缺少 GEO 資源文件",

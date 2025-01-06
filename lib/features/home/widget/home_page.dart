@@ -98,9 +98,9 @@ class HomePage extends HookConsumerWidget {
                               ElevatedButton(
                                 onPressed: () {
                                   // 导航到套餐购买页面
-                                  const PurchaseRoute().push(context);
+                                    launchUrl(Uri.parse('https://boostqz.com'));
                                 },
-                                child: Text(t.home.goToPurchasePage),
+                                child: Text("到官网购买套餐"),
                               ),
                             ],
                           ),
