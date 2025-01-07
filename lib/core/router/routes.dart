@@ -68,10 +68,6 @@ GlobalKey<NavigatorState>? dynamicRootKey = useMobileRouter ? rootNavigatorKey :
             ),
           ],
         ),
-        TypedGoRoute<LogsOverviewRoute>(
-          path: "logs",
-          name: LogsOverviewRoute.name,
-        ),
       ],
     ),
     TypedGoRoute<ProxiesRoute>(
@@ -144,10 +140,6 @@ class MobileWrapperRoute extends ShellRouteData {
     TypedGoRoute<SettingsRoute>(
       path: "/settings",
       name: SettingsRoute.name,
-    ),
-    TypedGoRoute<LogsOverviewRoute>(
-      path: "/logs",
-      name: LogsOverviewRoute.name,
     ),
   ],
 )

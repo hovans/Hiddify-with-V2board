@@ -64,7 +64,6 @@ class SystemTrayNotifier extends _$SystemTrayNotifier with AppLogger {
     final destinations = <(String label, String location)>[
       (t.home.pageTitle, const HomeRoute().location),
       (t.proxies.pageTitle, const ProxiesRoute().location),
-      (t.logs.pageTitle, const LogsOverviewRoute().location),
       (t.settings.pageTitle, const SettingsRoute().location),
     ];
 
