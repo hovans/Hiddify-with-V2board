@@ -26,26 +26,26 @@ env:
   TARGET_NAME_ipa: "Hiddify-iOS"
 
 jobs:
-  # test:
-  #   outputs:
-  #     draftBuildCode: ${{ steps.draftBuildCode.outputs.datetime }}
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: subosito/flutter-action@v2.13.0
-  #       with:
-  #         flutter-version: ${{ env.FLUTTER_VERSION }}
-  #         channel: 'stable'
-  #         cache: true
+  test:
+    outputs:
+      draftBuildCode: ${{ steps.draftBuildCode.outputs.datetime }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2.13.0
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: 'stable'
+          cache: true
 
-  #     - name: Prepare
-  #       run: make linux-prepare
-  #     - name: Test
-  #       run: flutter test
+      - name: Prepare
+        run: make linux-prepare
+      - name: Test
+        run: flutter test
 
-  #     - name: make draftBuildCode
-  #       id: draftBuildCode
-  #       run: echo "::set-output name=datetime::$(date +'%d.%H.%M')"
+      - name: make draftBuildCode
+        id: draftBuildCode
+        run: echo "::set-output name=datetime::$(date +'%d.%H.%M')"
 
   build_apk:
     needs: test
