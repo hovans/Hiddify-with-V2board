@@ -535,7 +535,7 @@
     "generateWarpConfig": "生成 WARP 配置文件",
     "missingWarpConfig": "WARP 配置文件缺失",
     "warpConfigGenerated": "WARP 配置已生成",
-    "pageTitle": "配置选项",
+    "pageTitle": "分流设置",
     "logLevel": "日志级别",
     "blockAds": "阻止广告",
     "resolveDestination": "解析目标地址",
