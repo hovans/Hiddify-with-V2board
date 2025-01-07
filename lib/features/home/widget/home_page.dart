@@ -98,7 +98,7 @@ class HomePage extends HookConsumerWidget {
                               ElevatedButton(
                                 onPressed: () {
                                   // 导航到套餐购买页面
-                                  launchUrl(Uri.parse('https://beibei.cloud'));
+                                  launchUrl(Uri.parse('https://youtu0.com'));
                                 },
                                 child: Text("请点击官网购买套餐，购买后请重新登录"),
                               ),
