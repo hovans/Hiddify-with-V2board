@@ -26,8 +26,7 @@ import 'package:hiddify/utils/utils.dart';
 
 part 'routes.g.dart';
 
-GlobalKey<NavigatorState>? dynamicRootKey =
-    useMobileRouter ? rootNavigatorKey : null;
+GlobalKey<NavigatorState>? dynamicRootKey = useMobileRouter ? rootNavigatorKey : null;
 
 @TypedShellRoute<MobileWrapperRoute>(
   routes: [
@@ -72,10 +71,6 @@ GlobalKey<NavigatorState>? dynamicRootKey =
         TypedGoRoute<LogsOverviewRoute>(
           path: "logs",
           name: LogsOverviewRoute.name,
-        ),
-        TypedGoRoute<AboutRoute>(
-          path: "about",
-          name: AboutRoute.name,
         ),
       ],
     ),
@@ -153,10 +148,6 @@ class MobileWrapperRoute extends ShellRouteData {
     TypedGoRoute<LogsOverviewRoute>(
       path: "/logs",
       name: LogsOverviewRoute.name,
-    ),
-    TypedGoRoute<AboutRoute>(
-      path: "/about",
-      name: AboutRoute.name,
     ),
   ],
 )
@@ -343,8 +334,7 @@ class ProfilesOverviewRoute extends GoRouteData {
   Page<void> buildPage(BuildContext context, GoRouterState state) {
     return BottomSheetPage(
       name: name,
-      builder: (controller) =>
-          ProfilesOverviewModal(scrollController: controller),
+      builder: (controller) => ProfilesOverviewModal(scrollController: controller),
     );
   }
 }

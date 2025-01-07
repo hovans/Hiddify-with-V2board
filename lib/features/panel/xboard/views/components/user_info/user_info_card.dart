@@ -54,12 +54,6 @@ class _UserInfoCardState extends ConsumerState<UserInfoCard> {
           children: [
             Expanded(
               child: Text(
-                '${t.userInfo.plan}: ${userInfo.planId}',
-                style: const TextStyle(fontSize: 12),
-              ),
-            ),
-            Expanded(
-              child: Text(
                 '${t.userInfo.accountStatus}: ${userInfo.banned ? t.userInfo.banned : t.userInfo.active}',
                 style: const TextStyle(fontSize: 12),
                 textAlign: TextAlign.end,

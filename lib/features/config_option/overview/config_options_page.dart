@@ -149,28 +149,28 @@ class ConfigOptionsPage extends HookConsumerWidget {
                     presentChoice: (value) => value.present(t),
                     onChanged: (val) => ref.watch(ConfigOptions.directDnsAddress.notifier).reset(),
                   ),
-                  SwitchListTile(
-                    title: Text(experimental(t.config.blockAds)),
-                    value: ref.watch(ConfigOptions.blockAds),
-                    onChanged: ref.watch(ConfigOptions.blockAds.notifier).update,
-                  ),
+                  // SwitchListTile(
+                  //   title: Text(experimental(t.config.blockAds)),
+                  //   value: ref.watch(ConfigOptions.blockAds),
+                  //   onChanged: ref.watch(ConfigOptions.blockAds.notifier).update,
+                  // ),
                   SwitchListTile(
                     title: Text(experimental(t.config.bypassLan)),
                     value: ref.watch(ConfigOptions.bypassLan),
                     onChanged: ref.watch(ConfigOptions.bypassLan.notifier).update,
                   ),
-                  SwitchListTile(
-                    title: Text(t.config.resolveDestination),
-                    value: ref.watch(ConfigOptions.resolveDestination),
-                    onChanged: ref.watch(ConfigOptions.resolveDestination.notifier).update,
-                  ),
-                  ChoicePreferenceWidget(
-                    selected: ref.watch(ConfigOptions.ipv6Mode),
-                    preferences: ref.watch(ConfigOptions.ipv6Mode.notifier),
-                    choices: IPv6Mode.values,
-                    title: t.config.ipv6Mode,
-                    presentChoice: (value) => value.present(t),
-                  ),
+                  // SwitchListTile(
+                  //   title: Text(t.config.resolveDestination),
+                  //   value: ref.watch(ConfigOptions.resolveDestination),
+                  //   onChanged: ref.watch(ConfigOptions.resolveDestination.notifier).update,
+                  // ),
+                  // ChoicePreferenceWidget(
+                  //   selected: ref.watch(ConfigOptions.ipv6Mode),
+                  //   preferences: ref.watch(ConfigOptions.ipv6Mode.notifier),
+                  //   choices: IPv6Mode.values,
+                  //   title: t.config.ipv6Mode,
+                  //   presentChoice: (value) => value.present(t),
+                  // ),
                   const SettingsDivider(),
                   SettingsSection(t.config.section.dns),
                   ValuePreferenceWidget(
@@ -234,11 +234,11 @@ class ConfigOptionsPage extends HookConsumerWidget {
                     title: t.config.serviceMode,
                     presentChoice: (value) => value.present(t),
                   ),
-                  SwitchListTile(
-                    title: Text(t.config.strictRoute),
-                    value: ref.watch(ConfigOptions.strictRoute),
-                    onChanged: ref.watch(ConfigOptions.strictRoute.notifier).update,
-                  ),
+                  // SwitchListTile(
+                  //   title: Text(t.config.strictRoute),
+                  //   value: ref.watch(ConfigOptions.strictRoute),
+                  //   onChanged: ref.watch(ConfigOptions.strictRoute.notifier).update,
+                  // ),
                   ChoicePreferenceWidget(
                     selected: ref.watch(ConfigOptions.tunImplementation),
                     preferences: ref.watch(ConfigOptions.tunImplementation.notifier),
@@ -270,60 +270,60 @@ class ConfigOptionsPage extends HookConsumerWidget {
                     digitsOnly: true,
                     validateInput: isPort,
                   ),
-                  SwitchListTile(
-                    title: Text(
-                      experimental(t.config.allowConnectionFromLan),
-                    ),
-                    value: ref.watch(ConfigOptions.allowConnectionFromLan),
-                    onChanged: ref.read(ConfigOptions.allowConnectionFromLan.notifier).update,
-                  ),
+                  // SwitchListTile(
+                  //   title: Text(
+                  //     experimental(t.config.allowConnectionFromLan),
+                  //   ),
+                  //   value: ref.watch(ConfigOptions.allowConnectionFromLan),
+                  //   onChanged: ref.read(ConfigOptions.allowConnectionFromLan.notifier).update,
+                  // ),
                   const SettingsDivider(),
-                  SettingsSection(
-                    experimental(t.config.section.tlsTricks),
-                    key: ConfigOptionSection._fragmentKey,
-                  ),
-                  SwitchListTile(
-                    title: Text(t.config.enableTlsFragment),
-                    value: ref.watch(ConfigOptions.enableTlsFragment),
-                    onChanged: ref.watch(ConfigOptions.enableTlsFragment.notifier).update,
-                  ),
-                  ValuePreferenceWidget(
-                    value: ref.watch(ConfigOptions.tlsFragmentSize),
-                    preferences: ref.watch(ConfigOptions.tlsFragmentSize.notifier),
-                    title: t.config.tlsFragmentSize,
-                    inputToValue: OptionalRange.tryParse,
-                    presentValue: (value) => value.present(t),
-                    formatInputValue: (value) => value.format(),
-                  ),
-                  ValuePreferenceWidget(
-                    value: ref.watch(ConfigOptions.tlsFragmentSleep),
-                    preferences: ref.watch(ConfigOptions.tlsFragmentSleep.notifier),
-                    title: t.config.tlsFragmentSleep,
-                    inputToValue: OptionalRange.tryParse,
-                    presentValue: (value) => value.present(t),
-                    formatInputValue: (value) => value.format(),
-                  ),
-                  SwitchListTile(
-                    title: Text(t.config.enableTlsMixedSniCase),
-                    value: ref.watch(ConfigOptions.enableTlsMixedSniCase),
-                    onChanged: ref.watch(ConfigOptions.enableTlsMixedSniCase.notifier).update,
-                  ),
-                  SwitchListTile(
-                    title: Text(t.config.enableTlsPadding),
-                    value: ref.watch(ConfigOptions.enableTlsPadding),
-                    onChanged: ref.watch(ConfigOptions.enableTlsPadding.notifier).update,
-                  ),
-                  ValuePreferenceWidget(
-                    value: ref.watch(ConfigOptions.tlsPaddingSize),
-                    preferences: ref.watch(ConfigOptions.tlsPaddingSize.notifier),
-                    title: t.config.tlsPaddingSize,
-                    inputToValue: OptionalRange.tryParse,
-                    presentValue: (value) => value.format(),
-                    formatInputValue: (value) => value.format(),
-                  ),
-                  const SettingsDivider(),
-                  SettingsSection(experimental(t.config.section.warp)),
-                  WarpOptionsTiles(key: ConfigOptionSection._warpKey),
+                  // SettingsSection(
+                  //   experimental(t.config.section.tlsTricks),
+                  //   key: ConfigOptionSection._fragmentKey,
+                  // ),
+                  // SwitchListTile(
+                  //   title: Text(t.config.enableTlsFragment),
+                  //   value: ref.watch(ConfigOptions.enableTlsFragment),
+                  //   onChanged: ref.watch(ConfigOptions.enableTlsFragment.notifier).update,
+                  // ),
+                  // ValuePreferenceWidget(
+                  //   value: ref.watch(ConfigOptions.tlsFragmentSize),
+                  //   preferences: ref.watch(ConfigOptions.tlsFragmentSize.notifier),
+                  //   title: t.config.tlsFragmentSize,
+                  //   inputToValue: OptionalRange.tryParse,
+                  //   presentValue: (value) => value.present(t),
+                  //   formatInputValue: (value) => value.format(),
+                  // ),
+                  // ValuePreferenceWidget(
+                  //   value: ref.watch(ConfigOptions.tlsFragmentSleep),
+                  //   preferences: ref.watch(ConfigOptions.tlsFragmentSleep.notifier),
+                  //   title: t.config.tlsFragmentSleep,
+                  //   inputToValue: OptionalRange.tryParse,
+                  //   presentValue: (value) => value.present(t),
+                  //   formatInputValue: (value) => value.format(),
+                  // ),
+                  // SwitchListTile(
+                  //   title: Text(t.config.enableTlsMixedSniCase),
+                  //   value: ref.watch(ConfigOptions.enableTlsMixedSniCase),
+                  //   onChanged: ref.watch(ConfigOptions.enableTlsMixedSniCase.notifier).update,
+                  // ),
+                  // SwitchListTile(
+                  //   title: Text(t.config.enableTlsPadding),
+                  //   value: ref.watch(ConfigOptions.enableTlsPadding),
+                  //   onChanged: ref.watch(ConfigOptions.enableTlsPadding.notifier).update,
+                  // ),
+                  // ValuePreferenceWidget(
+                  //   value: ref.watch(ConfigOptions.tlsPaddingSize),
+                  //   preferences: ref.watch(ConfigOptions.tlsPaddingSize.notifier),
+                  //   title: t.config.tlsPaddingSize,
+                  //   inputToValue: OptionalRange.tryParse,
+                  //   presentValue: (value) => value.format(),
+                  //   formatInputValue: (value) => value.format(),
+                  // ),
+                  // const SettingsDivider(),
+                  //SettingsSection(experimental(t.config.section.warp)),
+                  //WarpOptionsTiles(key: ConfigOptionSection._warpKey),
                   const SettingsDivider(),
                   SettingsSection(t.config.section.misc),
                   ValuePreferenceWidget(
@@ -331,40 +331,40 @@ class ConfigOptionsPage extends HookConsumerWidget {
                     preferences: ref.watch(ConfigOptions.connectionTestUrl.notifier),
                     title: t.config.connectionTestUrl,
                   ),
-                  ListTile(
-                    title: Text(t.config.urlTestInterval),
-                    subtitle: Text(
-                      ref.watch(ConfigOptions.urlTestInterval).toApproximateTime(isRelativeToNow: false),
-                    ),
-                    onTap: () async {
-                      final urlTestInterval = await SettingsSliderDialog(
-                        title: t.config.urlTestInterval,
-                        initialValue: ref.watch(ConfigOptions.urlTestInterval).inMinutes.coerceIn(0, 60).toDouble(),
-                        onReset: ref.read(ConfigOptions.urlTestInterval.notifier).reset,
-                        min: 1,
-                        max: 60,
-                        divisions: 60,
-                        labelGen: (value) => Duration(minutes: value.toInt()).toApproximateTime(isRelativeToNow: false),
-                      ).show(context);
-                      if (urlTestInterval == null) return;
-                      await ref.read(ConfigOptions.urlTestInterval.notifier).update(Duration(minutes: urlTestInterval.toInt()));
-                    },
-                  ),
-                  ValuePreferenceWidget(
-                    value: ref.watch(ConfigOptions.clashApiPort),
-                    preferences: ref.watch(ConfigOptions.clashApiPort.notifier),
-                    title: t.config.clashApiPort,
-                    validateInput: isPort,
-                    digitsOnly: true,
-                    inputToValue: int.tryParse,
-                  ),
+                  // ListTile(
+                  //   title: Text(t.config.urlTestInterval),
+                  //   subtitle: Text(
+                  //     ref.watch(ConfigOptions.urlTestInterval).toApproximateTime(isRelativeToNow: false),
+                  //   ),
+                  //   onTap: () async {
+                  //     final urlTestInterval = await SettingsSliderDialog(
+                  //       title: t.config.urlTestInterval,
+                  //       initialValue: ref.watch(ConfigOptions.urlTestInterval).inMinutes.coerceIn(0, 60).toDouble(),
+                  //       onReset: ref.read(ConfigOptions.urlTestInterval.notifier).reset,
+                  //       min: 1,
+                  //       max: 60,
+                  //       divisions: 60,
+                  //       labelGen: (value) => Duration(minutes: value.toInt()).toApproximateTime(isRelativeToNow: false),
+                  //     ).show(context);
+                  //     if (urlTestInterval == null) return;
+                  //     await ref.read(ConfigOptions.urlTestInterval.notifier).update(Duration(minutes: urlTestInterval.toInt()));
+                  //   },
+                  // ),
+                  // ValuePreferenceWidget(
+                  //   value: ref.watch(ConfigOptions.clashApiPort),
+                  //   preferences: ref.watch(ConfigOptions.clashApiPort.notifier),
+                  //   title: t.config.clashApiPort,
+                  //   validateInput: isPort,
+                  //   digitsOnly: true,
+                  //   inputToValue: int.tryParse,
+                  // ),
 
-                  SwitchListTile(
-                    title: Text(experimental(t.config.useXrayCoreWhenPossible.Label)),
-                    subtitle: Text(t.config.useXrayCoreWhenPossible.Description),
-                    value: ref.watch(ConfigOptions.useXrayCoreWhenPossible),
-                    onChanged: ref.watch(ConfigOptions.useXrayCoreWhenPossible.notifier).update,
-                  ),
+                  // SwitchListTile(
+                  //   title: Text(experimental(t.config.useXrayCoreWhenPossible.Label)),
+                  //   subtitle: Text(t.config.useXrayCoreWhenPossible.Description),
+                  //   value: ref.watch(ConfigOptions.useXrayCoreWhenPossible),
+                  //   onChanged: ref.watch(ConfigOptions.useXrayCoreWhenPossible.notifier).update,
+                  // ),
                   const Gap(24),
                 ],
               ),

@@ -72,33 +72,33 @@ class AdvancedSettingTiles extends HookConsumerWidget {
               await ref.read(resetTunnelProvider.notifier).run();
             },
           ),
-        SwitchListTile(
-          title: Text(t.settings.advanced.debugMode),
-          value: debug,
-          secondary: const Icon(FluentIcons.window_dev_tools_24_regular),
-          onChanged: (value) async {
-            if (value) {
-              await showDialog<bool>(
-                context: context,
-                builder: (context) {
-                  return AlertDialog(
-                    title: Text(t.settings.advanced.debugMode),
-                    content: Text(t.settings.advanced.debugModeMsg),
-                    actions: [
-                      TextButton(
-                        onPressed: () => Navigator.of(context).maybePop(true),
-                        child: Text(
-                          MaterialLocalizations.of(context).okButtonLabel,
-                        ),
-                      ),
-                    ],
-                  );
-                },
-              );
-            }
-            await ref.read(debugModeNotifierProvider.notifier).update(value);
-          },
-        ),
+        // SwitchListTile(
+        //   title: Text(t.settings.advanced.debugMode),
+        //   value: debug,
+        //   secondary: const Icon(FluentIcons.window_dev_tools_24_regular),
+        //   onChanged: (value) async {
+        //     if (value) {
+        //       await showDialog<bool>(
+        //         context: context,
+        //         builder: (context) {
+        //           return AlertDialog(
+        //             title: Text(t.settings.advanced.debugMode),
+        //             content: Text(t.settings.advanced.debugModeMsg),
+        //             actions: [
+        //               TextButton(
+        //                 onPressed: () => Navigator.of(context).maybePop(true),
+        //                 child: Text(
+        //                   MaterialLocalizations.of(context).okButtonLabel,
+        //                 ),
+        //               ),
+        //             ],
+        //           );
+        //         },
+        //       );
+        //     }
+        //     await ref.read(debugModeNotifierProvider.notifier).update(value);
+        //   },
+        // ),
       ],
     );
   }

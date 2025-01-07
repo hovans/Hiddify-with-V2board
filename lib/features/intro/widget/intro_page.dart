@@ -53,10 +53,10 @@ class IntroPage extends HookConsumerWidget with PresLogger {
               child: MultiSliver(
                 children: [
                   const LocalePrefTile(),
-                  const SliverGap(4),
-                  const RegionPrefTile(),
-                  const SliverGap(4),
-                  const EnableAnalyticsPrefTile(),
+                  //const SliverGap(4),
+                  //const RegionPrefTile(),
+                  //const SliverGap(4),
+                  //const EnableAnalyticsPrefTile(),
                   const SliverGap(4),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -118,53 +118,15 @@ class IntroPage extends HookConsumerWidget with PresLogger {
 
   Future<void> autoSelectRegion(WidgetRef ref) async {
     try {
-      final countryCode = await TimeZoneToCountry.getLocalCountryCode();
-      final regionLocale = _getRegionLocale(countryCode);
-      loggy.debug(
-        'Timezone Region: ${regionLocale.region} Locale: ${regionLocale.locale}',
-      );
-      await ref.read(ConfigOptions.region.notifier).update(regionLocale.region);
+      await ref.read(ConfigOptions.region.notifier).update(Region.cn);
       await ref.watch(ConfigOptions.directDnsAddress.notifier).reset();
-      await ref.read(localePreferencesProvider.notifier).changeLocale(regionLocale.locale);
+      await ref.read(localePreferencesProvider.notifier).changeLocale(AppLocale.zhCn);
       return;
     } catch (e) {
       loggy.warning(
         'Could not get the local country code based on timezone',
         e,
       );
-    }
-
-    try {
-      final DioHttpClient client = DioHttpClient(
-        timeout: const Duration(seconds: 2),
-        userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0",
-        debug: true,
-      );
-      final response = await client.get<Map<String, dynamic>>('https://api.ip.sb/geoip/');
-
-      if (response.statusCode == 200) {
-        final jsonData = response.data!;
-        final regionLocale = _getRegionLocale(jsonData['country_code']?.toString() ?? "");
-
-        loggy.debug(
-          'Region: ${regionLocale.region} Locale: ${regionLocale.locale}',
-        );
-        await ref.read(ConfigOptions.region.notifier).update(regionLocale.region);
-        await ref.read(localePreferencesProvider.notifier).changeLocale(regionLocale.locale);
-      } else {
-        loggy.warning('Request failed with status: ${response.statusCode}');
-      }
-    } catch (e) {
-      loggy.warning('Could not get the local country code from ip');
-    }
-  }
-
-  RegionLocale _getRegionLocale(String country) {
-    switch (country.toUpperCase()) {
-      case "CN":
-        return RegionLocale(Region.cn, AppLocale.zhCn);
-      default:
-        return RegionLocale(Region.other, AppLocale.en);
     }
   }
 }
