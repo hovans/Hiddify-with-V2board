@@ -1,6 +1,6 @@
 {
   "general": {
-    "appTitle": "boost",
+    "appTitle": "youtu",
     "reset": "Reset",
     "toggle": {
       "enabled": "Enabled",
@@ -161,7 +161,7 @@
     "confirmButton": "Logout"
   },
   "login": {
-    "welcome": "Welcome to boost",
+    "welcome": "Welcome to youtu",
     "username": "Username",
     "password": "Password",
     "loginButton": "Login",

@@ -74,8 +74,7 @@ class HomePage extends HookConsumerWidget {
                                 ],
                               ),
                             ),
-                            if (MediaQuery.sizeOf(context).width < 840)
-                              const ActiveProxyFooter(),
+                            if (MediaQuery.sizeOf(context).width < 840) const ActiveProxyFooter(),
                           ],
                         ),
                       ),
@@ -83,15 +82,15 @@ class HomePage extends HookConsumerWidget {
                   ),
                 // 修改无活跃配置文件时的提示信息
                 AsyncData() => switch (hasAnyProfile) {
-                    AsyncData(value: true) =>
-                      const EmptyActiveProfileHomeBody(),
+                    AsyncData(value: true) => const EmptyActiveProfileHomeBody(),
                     _ => SliverFillRemaining(
                         hasScrollBody: false,
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(t.home.noSubscriptionMsg,
+                              Text(
+                                t.home.noSubscriptionMsg,
                                 textAlign: TextAlign.center,
                                 style: Theme.of(context).textTheme.bodyLarge,
                               ),
@@ -99,7 +98,7 @@ class HomePage extends HookConsumerWidget {
                               ElevatedButton(
                                 onPressed: () {
                                   // 导航到套餐购买页面
-                                    launchUrl(Uri.parse('https://boostqz.com'));
+                                  launchUrl(Uri.parse('https://youtu0.com.com'));
                                 },
                                 child: Text("请到官网购买套餐，购买后重新登录"),
                               ),
@@ -108,8 +107,7 @@ class HomePage extends HookConsumerWidget {
                         ),
                       ),
                   },
-                AsyncError(:final error) =>
-                  SliverErrorBodyPlaceholder(t.presentShortError(error)),
+                AsyncError(:final error) => SliverErrorBodyPlaceholder(t.presentShortError(error)),
                 _ => const SliverToBoxAdapter(),
               },
             ],
